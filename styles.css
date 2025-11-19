@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.hero {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+:root{
+  --green:#00b66a;
+  --dark:#222;
+  --muted:#7a7a7a;
+  --maxw:1100px;
+  --cardbg:#e9e9ef;
+  --radius:18px;
+}
+
+*{box-sizing:border-box}
+html,body{
+    height:100%;
+    margin:0;
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    color:var(--dark);
+    -webkit-font-smoothing:antialiased
+}
+
+.container{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+
+.site-header{background:#fff;border-bottom:1px solid #e6e6e6}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.logo{font-weight:800;font-size:22px;color:var(--green)}
+.logo .muted{font-weight:500;color:var(--muted);font-size:12px;margin-left:8px}
+
+.main-nav{display:flex;gap:10px;align-items:center}
+.btn{border:1px solid #ccc;background:#fff;padding:8px 12px;border-radius:6px;cursor:pointer}
+.btn.primary{background:var(--green);color:#fff;border-color:transparent}
+.btn.ghost{background:transparent;border-color:#cfcfcf}
+
+.search input{padding:8px;border-radius:6px;border:1px solid #ddd}
+
+/* Hero */
+.hero{background:var(--green);color:#fff;padding:48px 0}
+.hero-inner{display:flex;align-items:center;gap:40px}
+.hero-left{flex:1}
+.hero-left h1{font-size:72px;margin:0;letter-spacing:1px}
+.lead{opacity:.95;margin-top:12px;color:rgba(255,255,255,.9)}
+
+.hero-right{width:320px}
+.featured{background:transparent;padding:18px}
+.featured-placeholder{
+  /* make a fixed aspect box and keep a neutral background while image loads */
+  aspect-ratio: 4 / 3;
+  width: 320px;
+  max-width:100%;
+  overflow:hidden;
+  border-radius:4px;
+  background:#fff;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.featured-placeholder img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius:4px;
+}
+
+/* ensure the featured link doesn't add a background */
+.featured-image{display:block;text-decoration:none}
+
+/* keep hero layout stable on small screens */
+.hero-right{width:320px;flex:0 0 320px}
+@media (max-width:800px){
+  .hero-inner{flex-direction:column;align-items:flex-start}
+  .hero-left h1{font-size:48px}
+  .controls{flex-direction:column}
+  .footer-inner{flex-direction:column;gap:12px}
+  .hero-right{width:100%;flex:0 0 auto}
+}
+
+/* Controls */
+.controls{display:flex;gap:18px;padding:28px 0;align-items:flex-start}
+.control-group{background:#fff;padding:10px;border-radius:8px;border:1px solid #eee;min-width:180px}
+.toggle{display:none}
+.toggle-label{display:block;cursor:pointer;padding:8px;border-radius:6px;border:1px solid #e8e8e8;background:#fafafa}
+.toggle-body{max-height:0;overflow:hidden;transition:all .25s ease;padding:0 8px}
+.toggle:checked + .toggle-label + .toggle-body{max-height:160px;padding:8px 8px;margin-top:8px}
+
+/* Sort */
+.sort select{padding:8px;border-radius:6px;border:1px solid #ddd}
+
+/* Product grid */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:26px;padding:26px 0}
+.product-card{background:var(--cardbg);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;transition:transform .18s ease,box-shadow .18s ease;cursor:pointer}
+.product-card:focus, .product-card:hover{transform:translateY(-6px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+.thumb{display:block}
+.thumb .img{
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  border-radius: 12px;
+  background: #d4d4dd;
+  position: relative;
+}
+.thumb .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+.meta h3{margin:0;font-size:16px}
+.price{font-weight:700;margin-top:6px}
+.actions{display:flex;gap:8px;align-items:center;margin-top:8px}
+
+/* Modal (CSS-only using :target) */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.45);z-index:40}
+.modal:target{display:flex}
+.modal-panel{background:#fff;padding:20px;border-radius:12px;max-width:420px;width:90%;position:relative}
+.modal-panel .close{position:absolute;right:12px;top:8px;text-decoration:none;font-size:26px;color:#444}
+
+/* Footer */
+.site-footer{background:var(--green);color:#fff;padding:26px 0;margin-top:36px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.quick-buttons{display:flex;gap:8px;flex-wrap:wrap}
+.quick-buttons .btn{border-color:rgba(255,255,255,.3);color:#fff;background:transparent}
+
+/* small screens */
+@media (max-width:800px){
+  .hero-inner{flex-direction:column;align-items:flex-start}
+  .hero-left h1{font-size:48px}
+  .controls{flex-direction:column}
+  .footer-inner{flex-direction:column;gap:12px}
+  .hero-right{width:100%;flex:0 0 auto}
+}
